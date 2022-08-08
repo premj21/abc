@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>esl</title>
+</head>
+ 
+<body>
+
+    <div>
+        <div id="prem">
+            <p> list append n all
+ <br>
+n = int(input())
+l = []
+for _in range(n)
+ s = input().split()
+ cmd = s[0]
+ args = s[1:]
+ if cmd!="print":
+     cmd+="(" + ",".join(args) +")"
+     eval("l."+cmd)
+     else:
+         print(l)</p>
+        </div>
+
+
+        <div>
+            <p>
+                martirx x,y,z
+                <br>
+
+x,y,z,n = int(input()),int(input()),int(input()),int(input())
+ans = ([[a,b,c] for a in range(0,x+1) for b in range(0,y+1) for c in range(0,z+1)])
+print(ans)
+
+            </p>
+        </div>
+        <div>
+            <p>complex numm 
+                <br>
+
+class Complezx(object):
+    def _init_(self,real,imaginary):
+        self.real = real
+        self.imaginary = imaginary
+        
+    def _add_(self,no):
+        return complex(self.real+no.real,self.imaginary+no.imaginary)
+    def _sub_(self,no):
+        return complex(self.real-no.real,self.imaginary-no.imaginary)
+    def _mul_(self,no):
+        r = self.real*no.real-self.imaginary*no.imaginary
+        i = self.real*no.imaginary+self.imaginary*no.real
+        return complex(r,i)
+    def _truediv_(self,no):
+        do = no.real**2+no.imaginary**2
+        n = self*complex(no.real,-1*no.imaginary)
+        return complex(n.real/d,n.imaginary/d)
+    def mod(self):
+        d = self.real**2 + no.imaginary**2
+        return complex(math.sqrt(d),0)
+    def _str_(self):
+        if slef.imaginary ==0:
+            result = "%.2f+0.00i" %(self.real)
+        elif self.real == 0:
+            if self.imaginary>=0:
+                result = "0.00+%.2fi"%(self.imaginary)
+            else:
+                result =  result = "0.00 - %.2fi"%(abs(self.imaginary))
+        elif self.imaginary>0:
+            result = "%2f+%.2fi" % (self.real,self.imaginary)
+        else:
+            result ="%.2f-%.2fi" %(self.real,abs(self.imaginary))
+        return result
+        
+c = map(float,input().split())
+d = map(float,input().split())
+x = complex(*c)
+y = complex(*d)
+print(*map(str,[x+y,x-y,x*y,x/y,x.mod(),y.mod()]),sep='\n')
+
+
+            </p>
+        </div>
+        <div>
+            <p>
+                numpy same array 
+                <br>
+
+import numpy as np 
+
+nums1 = np.array([0.5,1.5,0.2])
+nums2 = np.array([0.5,1.4,0.2])
+print("original array:")
+print(nums1)
+print(nums2)
+print("\n test said two array are equal or no ? ")
+print(nums1==nums2)
+
+            </p>
+        </div>
+        <div>
+            <p>
+                numpy sort
+                <br>
+
+import numpy as np 
+<br>
+
+
+nums = np.array([[5.54,3.38,7.99],[3.34,4.38,6.99],[1.54,2.39,9.29]])
+
+print("origianl array:")
+print(nums) 
+print("sorted arrray")
+print(np.sort(nums))
+
+<br>
+numpy swap rows and cols
+<br>
+
+import numpy as np 
+nums = np.array([[1,2,3],[4,5,6],[7,8,9]])
+print("original array")
+print(nums)
+print("swaped rows and colloums are")
+print(nums[::-1,::-1])
+
+
+            </p>
+        </div>
+        <div>
+            <p>
+                sqlite create 
+                <br>
+
+import sqlite3
+try:
+   connecti = sqlite3.connect("hellow")
+   conn = connecti.cursor()
+   print("data base created and connect to the sqlite")
+   conn.execute("select sqlite_version();")
+   print("swlite data base verions is:",conn.fetchall())
+   conn.close()
+except sqlite3.Error as error:
+    print("\n errorts are:",error)
+finally:
+    if(connecti):
+        connecti.close()
+        print("connectino is closed")
+
+        <br>
+
+table sql 
+<br>
+
+import sqlite3
+from sqlite3 import Error
+
+def sql_connection():
+ try:
+    conn = sqlite3.connect("hell")
+    return conn 
+ except Error:
+    print(Error)
+    
+def sql_table(conn):
+    ab = conn.cursor()
+    ab.execute("CREATE TABLE  agent_master(agentcode char(60))")
+    print("\n agent_master file is created")
+    conn.commit()
+c = sql_connection()
+sql_table(c)
+if(c):
+    c.close()
+    print("\n the sqlite conncection is closed")
+            </p>
+        </div>
+    </div>
+    
+</body>
+</html>
+
+
+
+
+
